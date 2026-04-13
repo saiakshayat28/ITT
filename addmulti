@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+class multiply;
+class add
+{
+   int numA;
+   friend class multiply;
+   public:
+   add()
+   {
+      cout<<"Enter the first number"<<endl;
+      cin>>numA;
+   }
+};
+class multiply
+{
+   int numB;
+   public:
+      multiply()
+      {
+         cout<<"Enter the second number"<<endl;
+         cin>>numB;
+      }
+      int addition()
+      {
+         add a1;
+         return a1.numA+numB;
+      }
+      int multiplication()
+      {
+         add a2;
+         return a2.numA*numB;
+      }
+      };
+int main()
+{
+   multiply m1;
+   cout<<"Sum:"<<m1.addition()<<endl;
+   cout<<"Product:"<<m1.multiplication()<<endl;
+   return 0;
+   }
