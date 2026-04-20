@@ -1,0 +1,5 @@
+a=1
+b=11
+create=list(range(a,b))
+c=create[::2]
+print("After creating and deleting the given numbers in the list is {}".format(c))
