@@ -1,0 +1,6 @@
+def diff(x,y):
+   return x-y
+x=8
+y=28
+operation=diff
+print(operation(x,y))
