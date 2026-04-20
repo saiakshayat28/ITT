@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+   int a,b,sum,difference,product,reminder,quotient;
+   printf("Enter the two numbers\n");
+   scanf("%d%d",&a,&b);
+   sum=a+b;
+   difference=a-b;
+   product=a*b;
+   quotient=a/b;
+   reminder=a%b;
+   printf("Addition:\t%d+%d=%d\nSubtraction:\t%d-%d=%d\nProduct:\t%d*%d=%d\nQuotient:\t%d/%d=%d\nReminder:\t%dmod%d=%d\n",a,b,sum,a,b,difference,a,b,product,a,b,quotient,a,b,reminder);
+   return 0;
+}
