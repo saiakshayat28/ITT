@@ -1,0 +1,9 @@
+n=raw_input("Enter the binary number: ")
+list=[]
+delim=','
+x=n.split(delim)
+for i in x:
+    y=int(i,2)
+    if(y%5==0):
+        list.append(i)
+print (list)
