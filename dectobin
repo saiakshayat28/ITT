@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+class binary
+{
+   int decimal,dis,temp;
+   int * binaryArr;
+   public:
+   binary()
+   {
+      decimal=0;
+      dis=0;
+   }
+   void getdata()
+   {
+      cout<<"Enter the deicmal:";
+      cin>>decimal;
+   }
+   void size()
+   {
+      dis=0;
+      temp=decimal;
+      while(temp>0)
+      {
+         temp/=2;
+         dis++;
+      }
+   }
+   void store()
+   {
+      binaryArr = new int[dis];
+      int index=dis-1;
+      while(decimal>0)
+      {
+         binaryArr[index--]=decimal%2;
+         decimal/=2;
+      }
+   }
+   void display()
+   {
+      for(int i=0;i<dis;i++)
+      {
+         cout<<binaryArr[i];
+      }
+      cout<<endl;
+   }
+   ~binary()
+   {
+      delete [] binaryArr;
+   }
+};
+int main()
+{
+   binary b1;
+   b1.getdata();
+   b1.size();
+   b1.store();
+   b1.display();
+   return 0;
+}
