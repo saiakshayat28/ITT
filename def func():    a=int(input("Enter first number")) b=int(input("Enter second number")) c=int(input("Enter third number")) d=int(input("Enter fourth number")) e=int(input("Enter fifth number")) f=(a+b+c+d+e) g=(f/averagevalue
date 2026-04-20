@@ -1,0 +1,11 @@
+def func():
+   a=int(input("Enter first number"))
+b=int(input("Enter second number"))
+c=int(input("Enter third number"))
+d=int(input("Enter fourth number"))
+e=int(input("Enter fifth number"))
+f=(a+b+c+d+e)
+g=(f/5)
+print("sum of mark is {}".format(f))
+print("average of mark is {}".format(g))
+func()
