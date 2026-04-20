@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+class store
+{
+   string name;
+   int code_no,no_of_items;
+   float price;
+   public:
+   store()
+   {
+      name="";
+      code_no=0;
+      no_of_items=0;
+      price=0;
+   }
+   ~store()
+   {
+      cout<<"\n Destructor executed";
+   }
+   void getdata()
+   {
+      cout<<"Enter the title,code_no,price,no_of_items";
+      cin>>name>>code_no>>price>>no_of_items;
+   }
+   int getprice()
+   {
+      return price;
+   }
+   int get_items()
+   {
+      return no_of_items;
+   }
+};
+int main()
+{
+   int a,b;
+   store i1;
+   i1.getdata();
+   a=i1.getprice();
+   b=i2.get_items();
+   cout<<"Total worth of items available:"<<a*b;
+   return 0;
+}
