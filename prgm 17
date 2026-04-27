@@ -1,0 +1,9 @@
+list=[5,2,3,5,7,5,2,8]
+find=5
+indices=(i for i,x in enumerate[list if x==find])
+      count=len(indices)
+      if indices:
+      print("The value{}exits at indices:{}".format (find,indices))
+      print("It appears {} times in the list.".format(count))
+      else:
+      print("The value does not exist in the list.".format(find))
