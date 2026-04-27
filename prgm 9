@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+    long long mod = 1000000007;
+    while (T--) {
+        long long A, B, N;
+        cin >> A >> B >> N;
+        long long ans;
+        int res = N % 6;
+        if (res == 1) ans = A;
+        else if (res == 2) ans = B;
+        else if (res == 3) ans = B - A;
+        else if (res == 4) ans = -A;
+        else if (res == 5) ans = -B;
+        else ans = A - B;
+        cout << (ans % mod + mod) % mod << endl;
+    }
+    return 0;
+}
