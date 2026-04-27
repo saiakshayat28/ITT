@@ -1,0 +1,10 @@
+def calculate_charges(vehicle, hours):
+   rates = {'t': [20, 30], 'b': [20, 30], 'c': [10, 20], 's': [5, 10]}
+   base_rate, extra_rate = rates[vehicle]
+   return base_rate if hours <= 3 else base_rate + (hours - 3) * extra_rate
+vehicle = input("Enter vehicle (c for car, b for bus, t for truck, s for scooter): ").lower()
+entry_hours, entry_minutes = map(int, input("Enter entry time (HH MM): ").split())
+exit_hours, exit_minutes = map(int, input("Enter exit time (HH MM): ").split())
+total_hours = exit_hours - entry_hours + (1 if exit_minutes > entry_minutes else 0)
+charges = calculate_charges(vehicle, total_hours)
+print(f"Total parking charges: INR {charges}")
