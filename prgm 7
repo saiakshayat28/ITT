@@ -1,0 +1,12 @@
+a=input("Enter elements with space seperated: ")
+set1=set(a.split())
+b=input("Enter elements with space seperated: ")
+set2=set(b.split())
+s1={}
+s1=set(set1.intersection(set2))
+print("Intersection is: ",s1)
+s2=set()
+s2=set1.union(set2)
+print("Union is: ",s2)
+s3=set1.difference(set2)
+print("Diffference is: ",s3)
