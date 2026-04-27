@@ -1,0 +1,5 @@
+a=[1,2,3,4,5]
+add=sum(a)
+mean=add/len(a)
+print("sum of list is {}".format(add))
+print("mean of list is {}".format(mean))
