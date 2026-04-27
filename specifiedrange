@@ -1,0 +1,6 @@
+start=int(input("Enter the start value"))
+end=int(input("Enter the end value"))
+step=int(input("Enter the step value:"))
+num=list(range(start,end,step))
+new=num[::-1]
+print("Reduced list:",new)
