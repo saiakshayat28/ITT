@@ -1,0 +1,16 @@
+a=input("Enter set1 elements: ")
+set1=set(a.split())
+b=input("Enter set2 elements: ")
+set2=set(b.split())
+print("Set1= ",set1)
+print("Set2= ",set2)
+c=set1.issubset(set2)
+if (c==True):
+   print("Set1 is a subset of Set2")
+else:
+   print("Set1 is not a subset of Set2")
+d=set2.issubset(set1)
+if(d==True):
+   print("Set2 is a subset of Set1")
+else:
+   print("Set2 is not a subset of Set1")
