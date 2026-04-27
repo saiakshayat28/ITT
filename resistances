@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+class voltage
+{
+   float I,V1,V2,V3;
+   public:
+   void resistance(float a)
+   {
+      I=100/(a);
+         V1=I*a;
+         cout<<"Enter the resistance R1 "<<V1<<endl;
+   }
+   void resistance(float a,float b)
+   {
+      I=100/(a+b);
+         V1=I*a;
+         V2=I*b;
+         cout<<"Enter the resistance R1 "<<V1<<endl;
+         cout<<"Enter the resistance R2 "<<V2<<endl;
+   }
+   void resistance(float a,float b,float c)
+   {
+      I=100/(a+b+c);
+         V1=I*a;
+         V2=I*b;
+         V3=I*c;
+         cout<<"Enter the resistance R1 "<<V1<<endl;
+         cout<<"Enter the resistance R2 "<<V2<<endl;
+         cout<<"Enter the resistance R3 "<<V3<<endl;
+   }};
+int main()
+{
+   voltage V4;
+      V4.resistance(12.5);
+      V4.resistance(10.2,13.6);
+      V4.resistance(9.7,11.4,15.6);
+      return 0;
+}
