@@ -1,0 +1,11 @@
+a=int(input("Enter principle amount"))
+b=int(input("Enter period of time(years)"))
+c=int(input("Enter age of the person"))
+def func(a,b,c):
+   return d
+if(c>=60):
+   d=((a*12*b)/100)
+   print("simple interest of senior citizen is {}".format(d))
+else:
+   d=((a*10*b)/100)
+   print("simple interest of other person is{}".format(d))
