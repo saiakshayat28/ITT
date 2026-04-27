@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+class Hostel
+{
+private:
+    string hostelName;
+    int numRooms;
+    double pricePerRoom;
+    string location;
+public:
+        void setDetails() {
+        cout << "Hostel Name: ";
+        getline(cin >> ws, hostelName);
+        cout << "Number of Rooms: ";
+        cin >> numRooms;
+        cout << "Price per Room per Day: ";
+        cin >> pricePerRoom;
+        cout << "Location: ";
+        getline(cin >> ws, location);
+    }
+    void displayDetails() const
+{
+        cout << "Hostel Name: " << hostelName << endl;
+        cout << "Number of Rooms: " << numRooms << endl;
+        cout << "Price per Room per Day: $" << pricePerRoom << endl;
+        cout << "Location: " << location << endl;
+    }
+};
+int main() {
+    int numHostels;
+    cout << "Enter the number of hostels: ";
+    cin >> numHostels;
+    Hostel* hostels = new Hostel[numHostels];
+    for (int i = 0; i < numHostels; ++i) {
+        cout << "Enter details for Hostel " << (i + 1) << ":" << endl;
+        hostels[i].setDetails();
+    }
+    cout << "\n--- Hostel Details ---\n";
+    for (int i = 0; i < numHostels; ++i) {
+        cout << "Hostel " << (i + 1) << ":" << endl;
+        hostels[i].displayDetails();
+    }
+    delete[] hostels;
+    return 0;
+}
