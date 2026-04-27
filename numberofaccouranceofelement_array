@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+   int a[10],n,i,k,t=0;
+   printf("Enter the total no of elements");
+   scanf("%d",&n);
+   printf("Enter element one by one");
+   for(i=0;i<n;i++)
+   {
+      scanf("%d",&a[i]);
+   }
+   printf("Enter the element to be searched");
+   scanf("%d",&k);
+   for(i=0;i<n;i++)
+   {
+       if(a[i]==k)
+       {
+      t++;
+   }}
+printf("The element %d is occuring %d times",k,t);
+}
