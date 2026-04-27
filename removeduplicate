@@ -1,0 +1,6 @@
+def remove_dup(input_list):
+   return list(set(input_list))
+my_list=[1,2,3,2,4,5,1,6,3]
+unique_list=remove_dup(my_list)
+print("original list:",my_list)
+print("list after removing duplicates:",unique list)
