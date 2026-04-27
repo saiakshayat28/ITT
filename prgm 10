@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+class Employee
+{
+public:
+    virtual void Salary() = 0;
+};
+class PermanentEmployee : public Employee
+{
+    string job;
+    int pay;
+public:
+    PermanentEmployee(string j, int p) : job(j), pay(p) {}
+    void Salary()
+    {
+        cout << "Permanent Employee (" << job << ") Salary: " << pay << endl;
+    }
+};
+class DailyWageEmployee : public Employee
+{
+    int hours;
+    int rate;
+public:
+    DailyWageEmployee(int h, int r) : hours(h), rate(r)
+    {
+    }
+    void Salary()
+    {
+        cout << "Daily-Wage Employee Salary (Hours worked: " << hours << "): " << (hours * rate) << endl;
+    }
+};
+int main()
+{
+    PermanentEmployee e1("Manager", 50000);
+    PermanentEmployee e2("Developer", 40000);
+    DailyWageEmployee e3(40, 15.5);
+    DailyWageEmployee e4(30, 20);
+    e1.Salary();
+    e2.Salary();
+    e3.Salary();
+    e4.Salary();
+    return 0;
+}
