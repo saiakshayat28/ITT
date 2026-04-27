@@ -1,0 +1,4 @@
+def func():
+   print(str)
+str="My name is Sai Akshaya"
+func()
