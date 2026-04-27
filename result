@@ -1,0 +1,11 @@
+exam1=int(input("exam 1 is"))
+exam2=int(input("exam 2 is"))
+sport1=int(input("sport 1 is"))
+extra1=int(input("extra 1 is"))
+extra2=int(input("extra 2 is"))
+extra3=int(input("extra 3 is"))
+exam=((exam1+exam2)/2)*0.5
+extra=((extra1+extra2+extra3)/3)*0.3
+sport=sport1*0.2
+result=exam+extra+sport
+print(result)
