@@ -1,0 +1,7 @@
+countries_list = ["India", "Canada", "Brazil", "Australia", "Germany", "Japan", "London", "France", "United States",
+      "Dubai" ]
+countries_set = set(countries_list)
+sorted_countries = sorted (countries_set)
+print ("Countries in sorted order ;")
+for country in sorted_countries:
+   print (country)
