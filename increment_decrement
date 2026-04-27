@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+   int A=10,B;
+   printf("A=%d\n",A);
+   A++;
+   printf("After A++; A=%d\n",A);
+   ++A;
+   printf("After ++A; A=%d\n",A);
+   B=A++;
+   printf("After B=A++; B=%d,A=%d\n",B,A);
+   B=++A;
+   printf("After B=++A; B=%d,A=%d\n",B,A);
+   A--;
+   printf("After A--; A=%d\n",A);
+   --A;
+   printf("After --A; A=%d\n",A);
+   B=A--;
+   printf("After B=A--; B=%d,A=%d\n",B,A);
+   B=--A;
+   printf("After B=--A; B=%d,A=%d\n",B,A);
+   return 0;
+}
