@@ -1,0 +1,29 @@
+def is_prime (num):
+   if num<2:
+      return False
+   for i in range(2, int(num**0.5)+1):
+      if num%i==0:
+     return False
+   return True
+Primes={num for num in range(2,31))if is_prime(num) }
+odds={num for num in range(1,31)if num%2!=0}
+print("Prime numbers:", primes)
+print("Odd numbers:", odd)
+print("Union:", primes|odds)
+print("Intersection:", primes & odds)
+print("Difference(primes - odds):", primes - odds)
+print("Symmetric difference:", primes ^ odds)
+[23bee020@mepcolinux ~]$cat python20.py
+square = {x**2 for x in range (1,11)}
+cube = {x**3 for x in range (1,11)}
+print("Square:",sorted(square))
+print("cubes:",sorted(cube))
+square.update(cube)
+print("Square after update with cubes:",sorted(square))
+popped_element = square.pop()
+print("Popped element from square:",popped_element)
+print("Square after pop:",sorted(square))
+cube.remove(1)
+print("Cubes after clear :",sorted(cube))
+cube.clear()
+print("Cubes after clear:",sorted(cube))
