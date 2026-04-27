@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+   int N;
+   cout << "Enter number of elements: ";
+   cin >> N;
+   int largest = -1;
+   bool found = false;
+    for (int i = 0; i < N; i++)
+    {
+        int num;
+        cin >> num;
+        if (num >= 100 || num <= -100)
+        {
+            int original = num;
+            int reversed = 0;
+            int temp = num;
+            while (temp > 0)
+            {
+                reversed = (reversed * 10) + (temp % 10);
+                temp = temp / 10;
+            }
+            if (original == reversed)
+            {
+                if (!found || original > largest)
+                {
+                    largest = original;
+                }
+                found = true;
+            }
+        }
+    }
+    if (found)
+    {
+        cout << "Largest Palindrome: " << largest << endl;
+    } else
+    {
+        cout << "No Valid Palindrome" << endl;
+    }
+
+    return 0;
+}
