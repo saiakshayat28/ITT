@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+class number
+{
+    int value;
+public:
+    number(int x)
+    {
+        value=x;
+    }
+    friend number operator*(number& obj, int n);
+    friend number operator*(int n, number& obj);
+
+    void display()
+    {
+        cout << "value = " << value << endl;
+    }
+};
+number operator*(number& obj, int n)
+{
+    return number(obj.value * n);
+}
+number operator*(int n, number& obj)
+{
+    return number(n * obj.value);
+}
+int main()
+{
+    number n1(20);
+    number ans1 = n1 * 6;
+    cout << "Result of n1 * 6: ";
+    ans1.display();
+    number ans2 = 4 * n1;
+    cout << "Result of 4 * n1: ";
+    ans2.display();
+    number n2(8);
+    number ans3 = n2 * 3;
+    cout << "Result of n2 * 3: ";
+    ans3.display();
+    return 0;
+}
