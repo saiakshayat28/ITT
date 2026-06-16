@@ -1,0 +1,30 @@
+#include<stdio.h>
+union employee
+{
+   char name[20];
+   int empno;
+   int bp;
+};
+int main()
+{
+   int i,n;
+   float ts;
+   union employee c[60];
+   printf("Enter no of employees");
+   scanf("%d",&n);
+   for(i=0;i<n;i++)
+   {
+      printf("Enter the name");
+      scanf("%s",c[i].name);
+      printf("Enter the no");
+      scanf("%d",&c[i].empno);
+      printf("Enter the pay");
+      scanf("%d",&c[i].bp);
+   }
+   printf("Employee details are");
+   for(i=0;i<n;i++)
+   {
+      ts=c[i].bp+0.5*c[i].bp+0.05*c[i].bp;
+      printf("\nTotal\t%f",ts);
+   }
+}
