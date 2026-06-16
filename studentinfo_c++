@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+class student
+{
+   string Name;
+   int Age;
+   float Height,Weight,Marks;
+   public:
+   student()
+   {
+      Name=" ";
+      Age=0;
+      Height=0;
+      Weight=0;
+      Marks=0;
+   }
+   ~student()
+   {
+      cout<<"\n Destructor executed";
+   }
+  void getdata()
+{
+   cout<<"Enter the student information(Name,Age,Height,Weight,Marks)";
+   cin>>Name>>Age>>Height>>Weight>>Marks;
+}
+void printdata()
+{
+   cout<<"Name:"<<Name<<endl;
+   cout<<"\n Age:"<<Age<<endl;
+   cout<<"\n Height:"<<Height<<endl;
+   cout<<"\n Weight:"<<Weight<<endl;
+   cout<<"\n Marks:"<<Marks<<endl;
+}};
+int main()
+{
+   student s1;
+   s1.getdata();
+   s1.printdata();
+   return 0;
+}
