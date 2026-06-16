@@ -1,0 +1,40 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+class student
+{
+   char* name;
+   int r1,m1;
+   public:
+   student(const char* x,int y,int z)
+   {
+      name=new char[strlen(x)+1];
+      strcpy(name,x);
+      r1=y;
+      m1=z;
+   }
+   student(student&ss1)
+   {
+      name=new char[strlen(ss1.name)+1];
+      strcpy(name,ss1.name);
+      r1=ss1.r1;
+      m1=ss1.m1;
+   }
+   void display()
+   {
+      cout<<"The name of the student is:"<<name<<endl;
+      cout<<"The regno of the student is:"<<r1<<endl;
+      cout<<"The mark of the student is:"<<m1<<endl;
+   }
+};
+int main()
+{
+   cout<<"Enter the student details"<<endl;
+   student s1("sai",20,90);
+   s1.display();
+   student s2(s1);
+   student s3 = s1 ;
+   s2.display();
+   s3.display();
+   return 0;
+}
