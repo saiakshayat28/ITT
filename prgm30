@@ -1,0 +1,17 @@
+def uplow(str1):
+   uppercount=0
+   lowercount=0
+   upperchar=" "
+   lowerchar=" "
+   for char in str1:
+      if char.isupper():
+         uppercount+=1
+         upperchar+=char
+      elif char.islower():
+         lowercount+=1
+         lowerchar+=char
+   print "No. of Uppercase letter and the letter: ",uppercount,",",upperchar
+   print "No. of Lowercase letter and the letter: ",lowercount,",",lowerchar
+str1=raw_input("Enter a string: ")
+print "Origiinal string: ",str1
+uplow(str1)
