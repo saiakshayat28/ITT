@@ -1,0 +1,10 @@
+a=int(input("Enter a number "))
+sum=0
+if(a>=1000 and a<=9999):
+  print"It is a 4-digit number"
+  while a>0:
+   sum=sum+(a%10)
+   a=a/10
+  print"Sum of 4-digit number is",sum
+else:
+  print"Not a 4-digit a number"
