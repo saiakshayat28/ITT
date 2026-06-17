@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+class DCgenerator
+{
+protected:
+    float emf, Ia;
+    float voltage, current;
+public:
+    void getdata()
+    {
+        cout << "Enter emf: ";
+        cin >> emf;
+        cout << "Enter Ia: ";
+        cin >> Ia;
+    }
+    void display()
+    {
+        cout << "Voltage: " << voltage << " V" << endl;
+        cout << "Current: " << current << " A" << endl;
+    }
+};
+class Seriesgenerator : public DCgenerator
+{
+public:
+    void calculate(float Ra, float Rs)
+    {
+        voltage = emf - (Ia * (Ra + Rs));
+        current = Ia;
+    }
+    void getdetails()
+    {
+        cout << "Series Generator:" << endl;
+        display();
+    }
+};
+class Shuntgenerator : public DCgenerator
+{
+public:
+    void calculate(float Ra, float Rsh)
+    {
+        voltage = emf - (Ia * Ra);
+        float Ish = voltage / Rsh;
+        current = Ia + Ish;
+    }
+    void getdetails()
+    {
+        cout << "Shunt Generator:" << endl;
+        display();
+    }
+};
+class Compoundgenerator : public DCgenerator
+{
+public:
+    void calculate(float Ra, float Rs, float Rsh)
+    {
+        voltage = emf - (Ia * (Ra + Rs));
+        float Ish = voltage / Rsh;
+        current = Ia + Ish;
+    }
+    void getdetails()
+    {
+        cout << "Compound Generator:" << endl;
+        display();
+    }
+};
+int main()
+{
+    Seriesgenerator se;
+    se.getdata();
+    se.calculate(1.8, 4);
+    se.getdetails();
+    Shuntgenerator sh;
+    sh.getdata();
+    sh.calculate(1.8, 85);
+    sh.getdetails();
+    Compoundgenerator co;
+    co.getdata();
+    co.calculate(1.8, 4, 85);
+    co.getdetails();
+    return 0;
+}
