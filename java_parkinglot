@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class ParkingLot
+{
+    static int availableSlots = 100;
+    void carEnters()
+    {
+        availableSlots = availableSlots - 1;
+    }
+}
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        ParkingLot l = new ParkingLot();
+        System.out.println("Initial available slots: 100");
+        System.out.print("How many cars are entering the parking lot? ");
+        int Cars = sc.nextInt();
+        for (int i = 1; i <= Cars; i++)
+        {
+            l.carEnters();
+        }
+        System.out.println("Final available slots: " + ParkingLot.availableSlots);
+        sc.close();
+    }
+}
