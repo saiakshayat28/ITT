@@ -1,0 +1,67 @@
+import java.util.Scanner;
+class Student 
+{
+    private int rollNum;
+    private String name;
+    private double mark;
+    public Student(int r, String n, double m)
+    {
+        rollNum = r;
+        name = n;
+        mark = m;
+    }
+    public int getRollNum() 
+    { 
+        return rollNum; 
+        
+    }
+    public String getName() 
+    {
+        return name; 
+        
+    }
+    public double getMark() 
+    {
+        return mark; 
+        
+    }
+    public void setRollNum(int r) 
+    {
+        rollNum = r; 
+        
+    }
+    public void setName(String n) 
+    {
+        name = n; 
+        
+    }
+    public void setMark(double m) 
+    {
+        mark = m; 
+        
+    }
+    public void display()
+    {
+        System.out.println("\n--- Student Details ---");
+        System.out.println("Roll Number: " + rollNum);
+        System.out.println("Name: " + name);
+        System.out.println("Mark: " + mark);
+    }
+}
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Roll Number: ");
+        int r = sc.nextInt();
+        sc.nextLine(); 
+        System.out.print("Enter Name: ");
+        String n = sc.nextLine();
+        System.out.print("Enter Mark: ");
+        double m = sc.nextDouble();
+        Student s1 = new Student(r, n, m);
+        s1.display();
+        sc.close();
+    }
+}
