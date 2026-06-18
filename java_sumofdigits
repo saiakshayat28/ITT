@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class SimpleSum
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a 3 digit number: ");
+        int number = sc.nextInt();
+        while (number >= 10)
+        {
+            int sum = 0;
+            while (number > 0)
+            {
+                int lastDigit = number % 10;
+                sum = sum + lastDigit;      
+                number = number / 10;        
+            }
+            number = sum;
+        }
+        System.out.println("Single digit: " + number);
+        sc.close();
+    }
+}
