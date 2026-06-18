@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class ToggleCase 
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter any text: ");
+        String originalText = sc.nextLine();
+        String resultText = ""; 
+        for (int i = 0; i < originalText.length(); i++)
+        {
+            char currentLetter = originalText.charAt(i);
+            if (Character.isUpperCase(currentLetter)) 
+            {
+                resultText = resultText + Character.toLowerCase(currentLetter);
+            }
+            else if (Character.isLowerCase(currentLetter))
+            {
+                resultText = resultText + Character.toUpperCase(currentLetter);
+            }
+            else {
+                resultText = resultText + currentLetter;
+            }
+        }
+        System.out.println("Toggled Text: " + resultText);
+        sc.close();
+    }
+}
