@@ -1,0 +1,23 @@
+interface Father{
+    void showfather();
+}
+interface Mother{
+    void showmother();
+}
+class child implements Father,Mother
+{
+    public void showfather() {
+        System.out.println("Father interface");
+    }
+    public void showmother() {
+        System.out.println("Mother interface");
+    }
+}
+public class Main
+{
+public static void main(String[] args) {
+  child c= new child();
+  c.showfather();
+  c.showmother();
+}
+}
