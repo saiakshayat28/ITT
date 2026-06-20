@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of terms (N): ");
+        int n = scanner.nextInt();
+        if (n <= 0) {
+            System.out.println("Please enter a positive integer greater than 0.");
+        } else {
+            System.out.println("Fibonacci Series up to " + n + " terms:");
+            int firstTerm = 0;
+            int secondTerm = 1;
+            for (int i = 1; i <= n; i++) {
+                System.out.print(firstTerm + " ");
+                int nextTerm = firstTerm + secondTerm;
+                firstTerm = secondTerm;
+                secondTerm = nextTerm;
+            }
+            System.out.println();
+        }
+        scanner.close();
+    }
+}
+
+
+
